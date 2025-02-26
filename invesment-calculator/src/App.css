@@ -1,0 +1,52 @@
+.container {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    border-radius: 10px;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    /* Căn giữa cả ngang và dọc */
+    height: 100vh;
+    margin: 0;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+th {
+    background: #444;
+}
