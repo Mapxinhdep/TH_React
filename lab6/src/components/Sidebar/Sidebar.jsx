@@ -30,7 +30,7 @@ export default function Sidebar() {
         ))}
       </nav>
       </div>
-      <div className="px-6 py-35 text-center">
+      <div className="px-6 py-20 text-center">
         <div className="rounded-lg shadow-md bg-blue-50 ">
             <img src={group} alt="Team Logo"/>
         <p className="font-semibold text-gray-800 mb-2">V2.0 is available</p>
