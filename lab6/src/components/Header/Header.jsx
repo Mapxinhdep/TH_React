@@ -5,7 +5,7 @@ import logo_question from "../../assets/img/logo_question.png";
 import logo_avatar from "../../assets/img/logo_avatar.png";
 
 const Header = () => (
-    <header className="flex justify-between items-center p-4 bg-white shadow-sm">
+    <header className="flex justify-between items-center p-4 bg-white shadow">
       <h1 className="text-pink-500 text-3xl font-bold">Dashboard</h1>
       <div className="flex items-center justify-end gap-4 p-4">
       {/* Search bar */}

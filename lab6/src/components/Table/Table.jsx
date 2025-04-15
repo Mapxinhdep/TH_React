@@ -1,5 +1,5 @@
 import StatusBadge from "../StatusBadge/StatusBadge";
-
+import icon_textfield from "../../assets/img/icon_textfield.png";
 const data = [
   { name: "Elizabeth Lee", company: "AvatarSystems", value: "$359", date: "10/07/2023", status: "New" },
   { name: "Carlos Garcia", company: "SmoozeShift", value: "$747", date: "24/07/2023", status: "New" },
@@ -9,8 +9,12 @@ const data = [
 
 const DataTable = () => (
   <div className="bg-white p-4 rounded-xl shadow">
-    <div className="flex justify-between mb-3">
-      <h2 className="text-lg font-semibold text-gray-700">Detailed Report</h2>
+    <div className="flex justify-between mb-5">
+      <div className="flex w-2xl">
+       <img src={icon_textfield} alt="" />
+      <h2 className="text-lg text-black-700 font-bold">Detailed Report</h2>
+      </div>
+     
       <div className="space-x-2">
         <button className="bg-pink-100 text-pink-600 px-4 py-1 rounded-md">Import</button>
         <button className="bg-pink-100 text-pink-600 px-4 py-1 rounded-md">Export</button>

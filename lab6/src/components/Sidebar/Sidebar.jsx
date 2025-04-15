@@ -18,19 +18,19 @@ const menu = [
 
 export default function Sidebar() {
   return (
-    <aside className="w-64 bg-white border-r">
+    <aside className="w-64 bg-white shadow h-auto">
       <div>
       <div className="px-6 py-4 text-xl"><img src={logo} alt="" /></div>
       <nav className="flex flex-col  px-5">
         {menu.map((item, index) => (
-          <div key={index} className="flex gap-3 py-2 text-gray-700 hover:bg-pink-500 hover:rounded-xl ">
-            {item.icon}
+          <div key={index} className="flex gap-3 py-2 text-gray-700 hover:bg-pink-500 hover:rounded-xl">
+            <div className="pl-4">{item.icon}</div>
             <span>{item.label}</span>
           </div>
         ))}
       </nav>
       </div>
-      <div className="px-6 py-20 text-center">
+      <div className="px-6 py-10 text-center">
         <div className="rounded-lg shadow-md bg-blue-50 ">
             <img src={group} alt="Team Logo"/>
         <p className="font-semibold text-gray-800 mb-2">V2.0 is available</p>

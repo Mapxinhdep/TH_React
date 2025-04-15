@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard";
 
 export default function App() {
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-white">
       <Sidebar />
       <div className="flex flex-col flex-1 overflow-hidden">
         <Header />
