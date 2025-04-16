@@ -1,17 +1,43 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import OverviewCard from "../components/OverviewCard/OverviewCard";
 import DataTable from "../components/Table/Table";
-import logo_cart from"../assets/img/logo_cart.png";
-import logo_$ from"../assets/img/logo_$.png";
-import logo_user from"../assets/img/logo_user.png";
+// import test from "../assets/img/Chat.png";
 
-const Dashboard = () => (
-  <div className="p-6 space-y-6">
-    <div className="flex space-x-4">
-      <OverviewCard title="Turnover" value="92,405" percent="5.39" bg="bg-pink-100" icon = {<img src={logo_cart}/>} />
-      <OverviewCard title="Profit" value="32,218" percent="5.39" bg="bg-blue-50" icon={<img src={logo_$}/>} />
-      <OverviewCard title="New customer" value="298" percent="6.84" bg="bg-blue-100" icon={<img src={logo_user}/>} />
+const Dashboard = () => {
+  const [overviewData, setOverviewData] = useState([]);
+  const [customers, setCustomers] = useState([]);
+
+  useEffect(() => {
+    axios.get("https://67ff055458f18d7209efd1e7.mockapi.io/dashboard/overviews").then((res) => {
+      setOverviewData(res.data);
+    });
+    axios.get("https://67ff055458f18d7209efd1e7.mockapi.io/dashboard/customers").then((res) => {
+      setCustomers(res.data);
+    });
+  }, []);
+  console.log(overviewData); 
+  console.log(customers); 
+  return (
+    <div className="space-y-6">
+      {/* Overview Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {overviewData.map((item) => (
+          <OverviewCard
+            key={item.id}
+            title={item.label}
+            value={item.value}
+            percent={item.percent}
+            icon={item.icon}
+            bg={item.background === "a" ? "bg-blue-50" : "bg-green-50"}
+          />
+        ))}
+      </div>
+
+      {/* Data Table */}
+      <DataTable data={customers} />
     </div>
-    <DataTable />
-  </div>
-);
+  );
+};
+
 export default Dashboard;
