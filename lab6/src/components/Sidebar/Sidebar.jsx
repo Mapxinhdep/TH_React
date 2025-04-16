@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Home } from 'lucide-react';
 import logo from "../../assets/img/logo.png";
 import logo_team from"../../assets/img/logo_team.png";
@@ -8,12 +9,12 @@ import logo_folder from"../../assets/img/Folder.png";
 import group from"../../assets/img/Group.png";
 
 const menu = [
-  { icon: <Home />, label: 'Dashboard' },
-  { icon: <img src={logo_folder}/>, label: 'Projects' },
-  { icon: <img src={logo_team}/>, label: 'Teams' },
-  { icon:  <img src={logo_chart}/>,label: 'Analytics' },
-  { icon: <img src={logo_chat}/>, label: 'Messages' },
-  { icon: <img src={logo_code}/>, label: 'Integrations' },
+  { icon: <Home />, label: 'Dashboard', path: '/' },
+  { icon: <img src={logo_folder} />, label: 'Projects', path: '/projects' },
+  { icon: <img src={logo_team} />, label: 'Teams', path: '/teams' },
+  { icon: <img src={logo_chart} />, label: 'Analytics', path: '/analytics' },
+  { icon: <img src={logo_chat} />, label: 'Messages', path: '/messages' },
+  { icon: <img src={logo_code} />, label: 'Integrations', path: '/integrations' },
 ];
 
 export default function Sidebar() {
