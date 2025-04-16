@@ -21,14 +21,22 @@ export default function Sidebar() {
     <aside className="w-64 bg-white shadow h-auto">
       <div>
       <div className="px-6 py-4 text-xl"><img src={logo} alt="" /></div>
-      <nav className="flex flex-col  px-5">
-        {menu.map((item, index) => (
-          <div key={index} className="flex gap-3 py-2 text-gray-700 hover:bg-pink-500 hover:rounded-xl">
-            <div className="pl-4">{item.icon}</div>
-            <span>{item.label}</span>
-          </div>
-        ))}
-      </nav>
+      <nav className="flex flex-col px-5">
+          {menu.map((item, index) => (
+            <NavLink
+              key={index}
+              to={item.path}
+              className={({ isActive }) =>
+                `flex gap-3 py-2 rounded-xl items-center px-4 text-gray-700 ${
+                  isActive ? 'bg-pink-500 text-white' : 'hover:bg-pink-100'
+                }`
+              }
+            >
+              {item.icon}
+              <span>{item.label}</span>
+            </NavLink>
+          ))}
+        </nav>
       </div>
       <div className="px-6 py-10 text-center">
         <div className="rounded-lg shadow-md bg-blue-50 ">
