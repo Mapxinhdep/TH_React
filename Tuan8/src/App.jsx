@@ -1,13 +1,19 @@
 import React from 'react';
-import Counter from './components/Counter';
-import './App.css'
+import { Provider } from 'react-redux';
+import { store } from './app/store';
+import CounterRedux from "./components/Counter";
+import CounterUseReducer from './components/CounterUseReducer';
+import './app.css';
 
-const App = () => {
+function App() {
   return (
-    <div className="bg-gray-900 min-h-screen flex items-center justify-center">
-      <Counter />
-    </div>
+    <Provider store={store}>
+      <div className="max-w-md mx-auto mt-10 space-y-6">
+        <CounterRedux />
+        <CounterUseReducer />
+      </div>
+    </Provider>
   );
-};
+}
 
 export default App;

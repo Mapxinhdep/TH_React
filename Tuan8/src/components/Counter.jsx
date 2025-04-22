@@ -8,7 +8,8 @@ const Counter = () => {
 
   return (
     <div className="text-center text-white mt-20">
-      <h1 className="text-3xl font-bold">Count: {count}</h1>
+        <h2 className="text-xl font-bold mb-2">Counter with redux</h2>
+      <div className="text-3xl font-bold">Count: {count}</div>
       <div className="flex justify-center gap-4 mt-4">
         <button onClick={() => dispatch(increment())} className="bg-black px-3 py-1 rounded">+</button>
         <button onClick={() => dispatch(decrement())} className="bg-black px-3 py-1 rounded">-</button>
