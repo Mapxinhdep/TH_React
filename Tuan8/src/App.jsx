@@ -1,18 +1,37 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import CounterRedux from "./components/Counter";
-import CounterUseReducer from './components/CounterUseReducer';
-import './app.css';
+import React, { useState } from 'react';
+import CounterApp from './components/CounterRedux';
+import CounterApp1 from './components/CounterUseReducer';
+import ToDoApp from './ToDoApp/ToDoApp';
 
 function App() {
+  const [currentApp, setCurrentApp] = useState(null); // 'counter' | 'todo' | null
+
   return (
-    <Provider store={store}>
-      <div className="max-w-md mx-auto mt-10 space-y-6">
-        <CounterRedux />
-        <CounterUseReducer />
+    <div style={{ textAlign: 'center', padding: '40px' }}>
+      <h1>SHOW</h1>
+
+      {/* Các nút chuyển */}
+      <div style={{ marginBottom: '20px' }}>
+        <button onClick={() => setCurrentApp('counterRedux')} style={{ margin: '0 10px' }}>
+          Counter App Redux
+        </button>
+        <button onClick={() => setCurrentApp('counterUseReducer')} style={{ margin: '0 10px' }}>
+          Counter App useReducer
+        </button>
+        <button onClick={() => setCurrentApp('todo')} style={{ margin: '0 10px' }}>
+          ToDo App
+        </button>
+        <button onClick={() => setCurrentApp(null)} style={{ margin: '0 10px' }}>
+          Ẩn tất cả
+        </button>
       </div>
-    </Provider>
+
+      {/* Hiển thị App tương ứng */}
+      {currentApp === 'counterRedux' && <CounterApp />}
+      {currentApp === 'counterUseReducer' && <CounterApp1 />}
+      {currentApp === 'todo' && <ToDoApp />}
+      {currentApp === null && <p>Chọn</p>}
+    </div>
   );
 }
 
