@@ -1,0 +1,114 @@
+{
+    "customers": [
+      {
+        "id": "1",
+        "name": "baovippro",
+        "avatar": "/assets/Avatar.png",
+        "company": "AvatarSystems",
+        "orderValue": 359,
+        "orderDate": "10/07/2023",
+        "status": "New"
+      },
+      {
+        "id": "2",
+        "name": "baovippro2",
+        "avatar": "/assets/Avatar1.png",
+        "company": "SmoozeShift",
+        "orderValue": 747,
+        "orderDate": "24/07/2023",
+        "status": "New"
+      },
+      {
+        "id": "3",
+        "name": "Elizabeth Bailey",
+        "avatar": "/assets/Avatar2.png",
+        "company": "Prime Time Telecom",
+        "orderValue": 564,
+        "orderDate": "08/08/2023",
+        "status": "In-progress"
+      },
+      {
+        "id": "4",
+        "name": "Ryan Brown",
+        "avatar": "/assets/Avatar3.png",
+        "company": "OmniTech Corporation",
+        "orderValue": 541,
+        "orderDate": "31/08/2023",
+        "status": "In-progress"
+      },
+      {
+        "id": "5",
+        "name": "Ryan Young",
+        "avatar": "/assets/Avatar4.png",
+        "company": "DataStream Inc.",
+        "orderValue": 769,
+        "orderDate": "01/05/2023",
+        "status": "Completed"
+      },
+      {
+        "id": "6",
+        "name": "Hailey Adams",
+        "avatar": "/assets/Avatar5.png",
+        "company": "FlowRush",
+        "orderValue": 922,
+        "orderDate": "10/06/2023",
+        "status": "Completed"
+      },
+      {
+        "id": "7",
+        "name": "Sophia Turner",
+        "avatar": "/assets/Avatar6.png",
+        "company": "NextGen Solutions",
+        "orderValue": 630,
+        "orderDate": "12/09/2023",
+        "status": "New"
+      },
+      {
+        "id": "fdf9",
+        "name": "Đặng Gia Bão",
+        "avatar": "/assets/Avatar.png",
+        "company": "null",
+        "orderValue": "1231",
+        "orderDate": "12/1/2025",
+        "status": "Completed"
+      },
+      {
+        "id": "29d6",
+        "name": "Đặng Gia Bão 2",
+        "avatar": "/assets/Avatar.png",
+        "company": "IUH",
+        "orderValue": "123",
+        "orderDate": "11/09/2024",
+        "status": "In-progress"
+      }
+    ],
+    "overview": [
+      {
+        "label": "Turnover",
+        "value": 92405,
+        "percent": 5.53,
+        "icon": "/assets/ButtonCart.png",
+        "background": "a",
+        "href": "/turnover",
+        "id": "d0fc"
+      },
+      {
+        "label": "Profit",
+        "value": 32219,
+        "percent": 5.39,
+        "icon": "/assets/ButtonDollar.png",
+        "background": "b",
+        "href": "/profit",
+        "id": "aaeb"
+      },
+      {
+        "label": "New customer",
+        "value": 289,
+        "percent": 6.44,
+        "icon": "/assets/ButtonProfile.png",
+        "background": "a",
+        "href": "/newcustomer",
+        "id": "de64"
+      }
+    ]
+  }
